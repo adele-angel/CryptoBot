@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.parallax {
+    background-image: url("./img/background.jpg");
+    height: 90vh;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax>picture {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+.parallax picture img {
+    width: 80%;
+}
+
+#main {
+    text-align: center;
+    border-left: 1px solid rgb(133, 173, 248);
+    border-right: 1px solid rgb(133, 173, 248);
+    padding: 5vh;
+    z-index: 0;
+    background-image: url("./img/about.jpg");
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer {
+    font-size: .9rem;
+    width: 100%;
+    color: white;
+    background-color: black;
+    padding: 2vh;
+    z-index: 1;
+    position: sticky;
+    bottom: 0;
+}
+
+@media screen and (max-width: 576px) {
+    footer {
+        font-size: .8rem;
+    }
+}
+
+/* Navigation bar CSS */
+#nav {
+    font-family: 'Audiowide', cursive;
+    position: -webkit-sticky;
+    position: sticky;
+    height: auto;
+    top: 0;
+    background-color: rgb(133, 173, 248);
+    z-index: 3;
+}
+
+.Navbar {
+    background-color: cornflowerblue;
+    display: flex;
+    color: black;
+}
+
+#logo {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#logopic:hover {
+    cursor: pointer;
+}
+
+.nav-btn {
+    font-size: .9rem;
+    padding: 1vh 2vh;
+}
+
+.nav-btn-brand {
+    margin-right: 2vh;
+}
+
+.nav-links {
+    text-align: center;
+    padding: 2.5vh 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links:hover {
+    color: black;
+    background-color: rgb(148, 177, 231);
+}
+
+.navbarItems {
+    display: flex;
+    cursor: pointer;
+}
+
+.active {
+    color: white;
+    background-color: rgb(57, 76, 116);
+}
+
+.navbarItems-right {
+    margin-left: auto;
+}
+
+.search_items {
+    height: 6vh;
+    margin: 0 2vh;
+}
+
+#searchinp {
+    width: 100%;
+    border-radius: 1.5vh;
+    border: none;
+    padding: 0 1vh;
+}
+
+.searchstuff {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.nav-btn-toggle {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+
+    #logopic {
+        content:url("./img/smallnavlogo.svg");
+    }
+
+    .navbarItems,
+    .Navbar {
+        flex-direction: column;
+    }
+
+    .navbarItems {
+        display: none;
+    }
+
+    .navbarItems-right {
+        margin-left: 0;
+    }
+
+    .search_items {
+        text-align: center;
+    }
+
+    #searchinp {
+        width: 40%;
+    }
+
+    .Navbar-ToggleShow {
+        display: flex;
+    }
+
+    .nav-btn-toggle {
+        align-self: flex-end;
+        display: initial;
+        position: absolute;
+        cursor: pointer;
+    }
+}
+/* Navigation bar CSS */
+
+/* Coin cards CSS */
+.coinRow {
+    z-index: 2;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 5px;
+}
+
+.coin {
+    text-align: left;
+    width: 30%;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px 10px 90px 10px;
+    background-color: rgb(247, 247, 247);
+    border: 1px solid rgb(228, 228, 228);
+}
+
+.coin button {
+    text-decoration: none;
+    padding: 5px;
+    background-color: cornflowerblue;
+}
+
+.coinTop {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 5px;
+    margin-bottom: 0;
+}
+
+.coinImage {
+    order: 0;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.coinImage>img {
+    width: 60%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    background-color: white;
+}
+
+.coinID {
+    order: 1;
+    flex-grow: 1;
+    padding: 5px;
+}
+
+.coinID>div {
+    padding: 5px 0;
+}
+
+.coinSymbol {
+    font-weight: bold;
+}
+
+.coinToggle {
+    order: 2;
+}
+
+.liveReport {
+    text-align: center;
+    color: darkslateblue;
+    font-weight: bold;
+    font-size: .7rem;
+}
+
+.coinBottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.coinCurr {
+    display: flex;
+    order: 0;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.eur,
+.usd,
+.ils {
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .coin {
+        width: 45%;
+        border-radius: 10px 10px 70px 10px;
+    }
+
+    .coinID {
+        width: 50%;
+    }
+
+    .coinName {
+        font-size: .8rem;
+    }
+
+    .coinImage {
+        width: 70%;
+    }
+
+    .coinImage>img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .coinRow {
+        flex-direction: column;
+    }
+
+    .coin {
+        width: 100%;
+    }
+
+    .coinTop>* {
+        flex: 1 100%;
+    }
+
+    .coinImage {
+        order: 1;
+        flex: 1 auto;
+    }
+
+    .coinToggle {
+        order: 0;
+        flex: 1 auto;
+        display: flex;
+        align-content: flex-end;
+        justify-content: flex-end;
+    }
+
+    .liveReport {
+        width: 20%;
+    }
+
+    .onoffswitch-switch {
+        height: 24px;
+    }
+
+    .coinBottom {
+        flex-direction: column;
+    }
+
+    .coinCurr {
+        flex-flow: row;
+    }
+}
+/* Coin cards CSS */
+
+/* Toggle button CSS */
+.onoffswitch {
+    position: relative;
+    width: 67px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+    display: none;
+}
+
+.onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.onoffswitch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    font-size: 14px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+    content: "";
+    padding-left: 10px;
+    background-color: rgb(52, 113, 193);
+    background-image: url('./img/switchon.svg');
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    color: #FFFFFF;
+}
+
+.onoffswitch-inner:after {
+    content: "";
+    padding-right: 10px;
+    background-color: rgb(161, 161, 161);
+    background-image: url('./img/switchoff.svg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    color: #999999;
+    text-align: right;
+}
+
+.onoffswitch-switch {
+    display: block;
+    width: 24px;
+    margin: 3px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 37px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
+/* Toggle button CSS */
+
+/* About */
+#aboutPage {
+    font-family: 'Audiowide', cursive;
+}
+
+#robotcog {
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+@media only screen and (max-width: 768px) {
+    #robotpic {
+        display: none;
+    }
+}
+
+/* Graph */
+.chartContainer {
+    border: 2px solid rgb(206, 206, 206);
+}
